@@ -1,12 +1,14 @@
-SRC = tests.cpp \
-	Account.cpp
+SRC = main.cpp \
+	Weapon.cpp \
+	HumanA.cpp \
+	HumanB.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = phonebook
+NAME = zombie
 
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address,leak -g3
+CC = g++
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -g3
 all: $(NAME)
 
 %.o : %.cpp
